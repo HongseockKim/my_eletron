@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron/main')
+const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
 
 function createWindow () {
@@ -9,6 +9,10 @@ function createWindow () {
             enableRemoteModule: true,
             preload: path.join(__dirname, 'preload.js')
         }
+    })
+
+    ipcMain.on('set-title', (event, title) => {
+        win.setTitle(title)
     })
     // 일렉트론 에서 devTool 활성화
     win.webContents.openDevTools()
