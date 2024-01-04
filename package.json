@@ -5,12 +5,15 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "allstart": "concurrently \"npm --prefix ./first-directory run start\" \"npm --prefix ./view run start\"",
+    "electron:start": "wait-on http://localhost:9095 && electron ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.7",
-    "electron": "^28.1.0"
+    "electron": "^28.1.0",
+    "wait-on": "^7.2.0"
   }
 }
