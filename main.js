@@ -3,9 +3,9 @@ const path = require('node:path')
 
 function createWindow () {
     const win = new BrowserWindow({
-        // width: 800,
-        // height: 600,
-        kiosk: true,
+         width: 800,
+         height: 600,
+        // kiosk: true, 전체화면
         webPreferences: {
             enableRemoteModule: true,
             preload: path.join(__dirname, 'preload.js')
