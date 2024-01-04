@@ -6,10 +6,12 @@ function createWindow () {
         width: 800,
         height: 600,
         webPreferences: {
+            enableRemoteModule: true,
             preload: path.join(__dirname, 'preload.js')
         }
     })
-
+    // 일렉트론 에서 devTool 활성화
+    win.webContents.openDevTools()
     // win.loadFile(path.join(__dirname,'./view/public/index.html'))
     win.loadURL('http://localhost:9095')
 }
