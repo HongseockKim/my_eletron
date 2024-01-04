@@ -10,8 +10,8 @@ function createWindow () {
         }
     })
 
-    win.loadFile('index.html')
-    // win.loadURL('https://www.naver.com/')
+    // win.loadFile(path.join(__dirname,'./view/public/index.html'))
+    win.loadURL('http://localhost:9095')
 }
 
 app.whenReady().then(() => {
