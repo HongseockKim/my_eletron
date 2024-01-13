@@ -9,15 +9,16 @@ const HeaderStyle = styled.header`
   .logo {
     max-width: 65px;
     width: 100%;
+    margin-right: 20px;
 
     img {
       width: 100%;
     }
   }
-
-  .nav_el {
-    flex-grow: 1;
+  .nav_list{
+    display: flex;
   }
+  
 `;
 
 export default HeaderStyle;
